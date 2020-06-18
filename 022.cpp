@@ -71,78 +71,78 @@ int main() {
 		getline(std::cin, temp);
 		std::cout << "Zadanie 7" << std::endl;
 
-		for (int i = 1; i <= 8; i++) {
-			for (int j = 1; j <= 8; j++) {
-				if ((i + j) % 2 == 0) {
-					std::cout << '#';
-				}
-				else {
-					std::cout << ' ';
-				}
-			}
-
-			std::cout << std::endl;
-		}
-
-
-		getline(std::cin, temp);
-		std::cout << "Zadanie 8" << std::endl;
-
-		int values[20];
-		for (int i = 0; i < 20; i++) {
-			values[i] = rand() % 10 + 1;
-			std::cout << values[i] << std::endl;
-		}
-
-		getline(std::cin, temp);
-		std::cout << "Zadanie 9" << std::endl;
-
-		std::cout << "a)" << std::endl;
-		int even_numbers = 0, odd_numbers = 0;
-		for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
-			if ((float(values[i]) / 2) - (int(values[i]) / 2) == 0) {
-				even_numbers++;
+	for (int i = 1; i <= 8; i++) {
+		for (int j = 1; j <= 8; j++) {
+			if ((i + j) % 2 == 0) {
+				std::cout << '#';
 			}
 			else {
-				odd_numbers++;
+				std::cout << ' ';
 			}
 		}
 
-		std::cout << "	Liczb parzystych: " << +even_numbers << std::endl;
-		std::cout << "	Liczb nieparzystych: " << +odd_numbers << std::endl;
+		std::cout << std::endl;
+	}
 
 
-		std::cout << "b)" << std::endl;
+	getline(std::cin, temp);
+	std::cout << "Zadanie 8" << std::endl;
 
-		int duplicates_number[11] = { 0 };
-		for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
-			duplicates_number[values[i]]++;
+	int values[20];
+	for (int i = 0; i < 20; i++) {
+		values[i] = rand() % 10 + 1;
+		std::cout << values[i] << std::endl;
+	}
+
+	getline(std::cin, temp);
+	std::cout << "Zadanie 9" << std::endl;
+
+	std::cout << "a)" << std::endl;
+	int even_numbers = 0, odd_numbers = 0;
+	for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
+		if ((float(values[i]) / 2) - (int(values[i]) / 2) == 0) {
+			even_numbers++;
 		}
-
-		for (int i = 0; i < sizeof(duplicates_number) / sizeof(int); i++) {
-			std::cout << "Liczba: " << i  <<  + " wystapila: " << + duplicates_number[i] << + " razy" << std::endl;
+		else {
+			odd_numbers++;
 		}
+	}
+
+	std::cout << "	Liczb parzystych: " << +even_numbers << std::endl;
+	std::cout << "	Liczb nieparzystych: " << +odd_numbers << std::endl;
 
 
-		std::cout << "c)" << std::endl;
-		int table_sum = 0;
-		for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
-			table_sum += values[i];
-		}
+	std::cout << "b)" << std::endl;
 
-		std::cout << "	Suma wszystkich liczb z tablicy: " << +table_sum << std::endl;
+	int duplicates_number[11] = { 0 };
+	for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
+		duplicates_number[values[i]]++;
+	}
 
-		getline(std::cin, temp);
-		std::cout << "Zadanie 10" << std::endl;
+	for (int i = 0; i < sizeof(duplicates_number) / sizeof(int); i++) {
+		std::cout << "Liczba: " << i  <<  + " wystapila: " << + duplicates_number[i] << + " razy" << std::endl;
+	}
 
-		int random_number = 0;
-		do
-		{
-			random_number = rand() % 10 + 1;
 
-			std::cout << "Wylosowana liczba: " << + random_number << std::endl;
-		} while (random_number != 7);
+	std::cout << "c)" << std::endl;
+	int table_sum = 0;
+	for (int i = 0; i < (sizeof(values) / sizeof(int)); i++) {
+		table_sum += values[i];
+	}
 
-		std::cout << "Wylosowano liczbe 7" << std::endl;
+	std::cout << "	Suma wszystkich liczb z tablicy: " << +table_sum << std::endl;
+
+	getline(std::cin, temp);
+	std::cout << "Zadanie 10" << std::endl;
+
+	int random_number = 0;
+	do
+	{
+		random_number = rand() % 10 + 1;
+
+		std::cout << "Wylosowana liczba: " << + random_number << std::endl;
+	} while (random_number != 7);
+
+	std::cout << "Wylosowano liczbe 7" << std::endl;
 
 }
