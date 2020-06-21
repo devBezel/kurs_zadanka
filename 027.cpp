@@ -16,7 +16,7 @@ int main() {
 
 	std::cout << "Zadanie 1" << std::endl;
 
-	std::cout << _01(4.0, 0) << std::endl;
+	std::cout << _01(4.0, 2) << std::endl;
 
 	getline(std::cin, temp);
 
@@ -52,15 +52,15 @@ double _01(double number, int power) {
 		return 1;
 	}
 
-	double result = 0;
+	double result = 1;
 	if (power > 0) {
 		for (int i = 0; i < power; i++) {
-			result += number * power;
+			result *= number;
 		}
 	}
 	else {
 		for (int i = -1; i >= power; i--) {
-			result += number * power;
+			result *= number;
 		}
 
 		result /= 1;
