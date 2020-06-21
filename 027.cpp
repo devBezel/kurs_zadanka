@@ -16,7 +16,7 @@ int main() {
 
 	std::cout << "Zadanie 1" << std::endl;
 
-	std::cout << _01(4.0, 2) << std::endl;
+	std::cout << _01(0, 0) << std::endl;
 
 	getline(std::cin, temp);
 
@@ -48,9 +48,12 @@ int main() {
 
 double _01(double number, int power) {
 
-	if (power == 0) {
+	if (number == 0)
+		return 0;
+
+	if (power == 0)
 		return 1;
-	}
+
 
 	double result = 1;
 	if (power > 0) {
